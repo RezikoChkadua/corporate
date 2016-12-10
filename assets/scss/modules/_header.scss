@@ -1,0 +1,35 @@
+header {
+	padding-top: 11.5px;
+	padding-bottom: 11.5px;
+	background: #ebeae9;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	top: 0px;
+	&.active {
+		border-bottom: 1px solid $p-color;
+	}
+	.navbar {
+		margin-bottom: 0;
+		.navbar-header {
+			display: table;
+			@include breakpoint2($mobile, $x-mobile) {
+				float: left;
+			}
+		}
+		.navbar-brand {
+			padding: 0;
+			margin-left: 0 !important;
+			float: none;
+			display: table-cell;
+			vertical-align: middle;
+			@include breakpoint2($mobile, $x-mobile) {
+				width: 100%;
+			}
+			img {
+				max-height: 100%;
+				width: auto;
+			}
+		}
+	}
+}

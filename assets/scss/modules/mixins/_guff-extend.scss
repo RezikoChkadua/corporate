@@ -1,0 +1,25 @@
+// Wraps interior content in several media queries
+@mixin breakpoint2($querystring1, $querystring2:"", $querystring3:"", $querystring4:"") {
+
+  @include breakpoint($querystring1) {
+    @content;
+  }
+  
+  @if $querystring2 != "" {
+    @include breakpoint($querystring2) {
+      @content;
+    }
+  }
+  
+  @if $querystring3 != "" {
+    @include breakpoint($querystring3) {
+      @content;
+    }
+  }
+  
+  @if $querystring4 != "" {
+    @include breakpoint($querystring4) {
+      @content;
+    }
+  }
+}

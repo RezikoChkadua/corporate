@@ -1,0 +1,341 @@
+// section base styles
+
+section:before, section:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+// End of section base styles
+
+.content {
+	position: relative;
+	z-index: 1;
+	margin-top: 75px;
+	h1 {
+		font-family: 'nexa_boldregular';
+		text-transform: uppercase;
+		color: $white;
+		font-size: 72px;
+		line-height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		@include breakpoint2($tablet) {
+			font-size: 60px;
+		}
+		@include breakpoint2($mobile, $x-mobile) {
+			font-size: 40px;
+		}
+	}
+	h2 {
+		font-family: 'nexa_boldregular';
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 88px;
+		@include breakpoint2($desktop) {
+			margin-bottom: md(88);
+		}
+		@include breakpoint2($tablet) {
+			margin-bottom: sm(88);
+		}
+		@include breakpoint2($mobile, $x-mobile) {
+			margin-bottom: xs(88);
+			font-size: 20px;
+		}
+
+	}
+
+	h3, h4 {
+		font-family: 'nexa_boldregular';
+		color: $p-color;
+	}
+
+	h3 {
+		margin-bottom: 33px;
+		span {
+			width: 100%;
+			color: #666666;
+			font-size: 16px;
+			float: left;
+		}
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+}
+.services, .our-team, .portfolio {
+	padding-top: 20px;
+	padding-bottom: 100px;
+	@include breakpoint2($desktop) {
+		margin-bottom: md(100);
+	}
+	@include breakpoint2($tablet) {
+		padding-bottom: sm(100);
+	}
+	@include breakpoint2($mobile, $x-mobile) {
+		padding-bottom: xs(100);
+	}
+}
+
+// Carousel slider component styles
+
+.carousel {
+	.carousel-inner {
+		height: 100%;
+	}
+	.carousel-control {
+		color: $p-color;
+		top: auto;
+		bottom: 40px;
+		width: 50%;
+		height: 40px;
+		background: transparent;
+	}
+	.carousel-indicators {
+		bottom: 10px;
+		li {
+			border: 1px solid $p-color;
+			&.active {
+				background: $p-color;
+			}
+		}
+	}
+}
+
+// End of carousel slider component styles
+
+
+// Banner section styles
+.banner {
+	.carousel {
+		@include breakpoint2($lg-desktop) {
+			min-height: 450px;
+		}
+		@include breakpoint2($desktop, $tablet, $mobile, $x-mobile) {
+			min-height: 400px;
+		}
+		.item {
+			height: 100%;
+			img {
+				max-width: none;
+				width: auto;
+				height: 100%;
+			}
+		}
+	}
+	.carousel-caption {
+		left: 0;
+		width: 100%;
+		text-align: left;
+		top: 20%;
+		@include breakpoint($desktop) {
+			top: 8%;
+		}
+		@include breakpoint2($tablet) {
+			top: 20%;
+		}
+		@include breakpoint2($mobile, $x-mobile) {
+			top: 15%;
+		}
+		h2 {
+			margin-top: 0;
+			margin-bottom: 40px;
+			@include breakpoint2($mobile, $x-mobile) {
+				margin-bottom: 20px;
+			}
+		}
+		p {
+			padding-right: 20%;
+		}
+	}
+}
+
+// End of banner section styles
+
+
+// Services section
+
+.services {
+	background: #15191c;
+	.service-box {
+		@include breakpoint2($mobile, $x-mobile) {
+			margin-top: 30px;
+		}
+		.service-box-image:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+		.service-box-image {
+			margin-bottom: 20px;
+			img {
+				height: auto;
+			}
+		}
+	}
+}
+
+// End of services section
+
+
+// portfolio section
+
+.portfolio {
+	background-color: #22282b;
+	padding-bottom: 45px;
+	h2 {
+		color: $p-color;
+	}
+	.portfolio-wrapper {
+		overflow: hidden;
+		overflow-x: scroll;
+		padding-left: 4px;
+		&::-webkit-scrollbar {
+			height: 6px;
+		}
+		&::-webkit-scrollbar-button {
+			display: none;
+			background-color: #252525;
+		}
+		&::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background-color: rgba(61, 61, 61, 0.09);
+		}
+		&::scrollbar-track {
+			border-radius: 10px;
+			background-color: #252525;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background-color: $p-color;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}        
+		&::-webkit-scrollbar-thumb:horisontal {
+		 	height: 10px;
+		}
+		.row-fluid {
+			font-size: 0;
+			margin-bottom: 4px;
+			text-align: center;
+			a {
+				width: 150px;
+				height: 150px;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				margin-bottom: 5px;
+				margin-right: 4px;
+				border-radius: 3px;
+				&:before {
+					display: none;
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-color: rgba(255, 255, 255, 0.6);
+					background-image: url('../images/content-area/eye-icon.png');
+					background-repeat: no-repeat;
+					background-size: 53px;
+					background-position: center;
+				}
+				&:hover:before {
+					display: block;
+				}
+			}
+			img {
+				max-width: none;
+				height: 100%;
+				width: auto;
+			}
+			.btn-more {
+				margin-top: 16px;
+			}
+		}
+  	}
+}
+
+// End of portfolio section
+
+
+// Our team section
+
+.our-team {
+	background: #191d1f;
+	.team-box {
+		@include breakpoint2($mobile, $x-mobile) {
+			margin-bottom: 30px;
+		}
+	}
+	.team-box-image {
+		img {
+			border-radius: 50%;
+			border: 3px solid $p-color;
+			@include breakpoint2($x-mobile) {
+				width: 50%;
+			}
+		}
+	}
+	.team-box-content {
+		h3 {
+			margin-top: 15px;
+		}
+		p {
+			color: $s-color;
+		}
+	}
+}
+
+// End of our team section
+
+
+//Contact-us section
+
+.contact-us {
+	color: $s-color;
+	position: relative;
+	.map-wrapper {
+		overflow: hidden;		
+		@include breakpoint2($x-mobile) {
+			max-height: 578px;			
+		}
+	}
+	h2 {
+		color: $p-color;
+		position: relative;
+		z-index: 2;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin: 0 auto;
+	    top: 40px;
+	}
+	.contact-info {
+		position: absolute;
+		z-index: 2;
+		padding-left: 0;
+		margin-bottom: 0;
+		color: #fff;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		li {
+			padding: 8px 0px;
+			text-align: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			line-height: 13px;
+			img {
+				float: left;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+//End of contact-us section

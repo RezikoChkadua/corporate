@@ -1,0 +1,20 @@
+.btn-more {
+    padding: 8px 30px;
+    background-color: $p-color;
+    color: $black;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: capitalize;
+    &.btn-off {
+        color: #a2a7a7;
+        background-color: #dbdede;
+    }
+}
+
+.btn:focus, .btn.focus, .btn:active:focus, 
+.btn:active.focus, .btn.active:focus, 
+.btn.active.focus {
+    outline: none;
+    box-shadow: none;
+}

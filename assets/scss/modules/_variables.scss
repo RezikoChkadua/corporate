@@ -1,0 +1,30 @@
+
+// colors:
+$white: #ffffff; 		// white
+$black: #000000;		// black
+$p-color: #00ccff;      // text primery color.
+$s-color: #666666;      // text secondary color.
+
+$bg-color: #161a1d;     // background color.
+
+$font-size-base: 16;
+
+
+$max-wrapper-width: 1920px;
+
+/*VARIABLES FOR RESPONSIVE*/
+//Large-desktop Media Query
+$lg-desktop: "(min-width: 1200px)" !default;
+// Desktop Media Query
+$desktop: "(min-width: 992px) and (max-width: 1199px)" !default;
+// Max desktop
+$max-desktop: "(max-width: 1199px)" !default;
+// Tablet Media Query
+$tablet: "(min-width: 768px) and (max-width: 991px)" !default;
+// Max tablet
+$max-tablet: "(max-width: 767px)" !default;
+// Mobile Media Query
+$mobile: "(min-width: 480px) and (max-width: 767px)" !default;
+// Max mobile
+$max-mobile: "(max-width: 479px)" !default;
+$x-mobile: "(max-width: 479px)";

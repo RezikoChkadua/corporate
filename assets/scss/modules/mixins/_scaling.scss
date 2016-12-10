@@ -1,0 +1,20 @@
+@import "../variables";
+
+@function md($px) {
+
+  @return $px * ($screen-sm/$screen-md) * 1px;
+
+}
+
+@function sm($px) {
+
+  @return md($px) * ($screen-xs/$screen-sm);
+
+}
+
+
+@function xs($px) {
+
+  @return sm($px) * (320/$screen-xs) * 1px;
+
+}

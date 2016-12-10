@@ -1,0 +1,12 @@
+﻿// Alef fonts
+@mixin font-light() {
+    font-weight:300;
+}
+
+@mixin font-semi-bold() {
+    font-weight:600;
+}
+
+@mixin font-bold() {
+   font-weight:700;
+}

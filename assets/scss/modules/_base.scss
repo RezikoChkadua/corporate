@@ -1,0 +1,58 @@
+@import "mixins/functions";
+@import "mixins/scaling";
+@import "mixins/guff";
+@import "mixins/guff-extend";
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.no-gutter-md {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+.no-gutter-xs {
+  @media (max-width: 767px) {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+.text-blue {
+  color: $p-color;
+}
+
+body {
+  font-size: 13px;
+  font-family: 'nexa_lightregular';
+  color: $white;
+  @include breakpoint2($mobile, $x-mobile) {
+      font-size: 16px;
+  }
+}
+
+.global-wrapper {
+  max-width: $max-wrapper-width;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+

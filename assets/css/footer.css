@@ -1,0 +1,28 @@
+/*VARIABLES FOR RESPONSIVE*/
+/*VARIABLES FOR RESPONSIVE*/
+/*VARIABLES FOR RESPONSIVE*/
+footer {
+  padding-top: 84px;
+  padding-bottom: 92px;
+  color: #ffffff;
+  background: #161a1d; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    footer {
+      padding-bottom: 65.03226px;
+      padding-bottom: 71.22581px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    footer {
+      padding-top: 40.64516px;
+      padding-bottom: 44.51613px; } }
+  @media (min-width: 480px) and (max-width: 767px) {
+    footer {
+      padding-top: 27.09677px;
+      padding-bottom: 29.67742px;
+      font-size: 13px; } }
+  @media (max-width: 479px) {
+    footer {
+      padding-top: 27.09677px;
+      padding-bottom: 29.67742px;
+      font-size: 13px; } }
+
+/*# sourceMappingURL=footer.css.map */

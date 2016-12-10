@@ -1,0 +1,35 @@
+.navbar {
+	#bs-navbar-collapse-1 {
+		.navbar-nav {
+			li {
+				a {
+					font-size: em(16);
+					line-height: 16px;
+					font-family: 'nexa_boldregular';
+					color: #15191c;
+					text-transform: uppercase;				
+					&.active {
+						color: $p-color;
+					}
+				}
+			}
+		}
+	}
+	.navbar-toggle {
+		margin-top: 4px;
+		margin-bottom: 0;
+		.icon-bar {
+			background: #000;
+			width: 30px;
+			height: 5px;
+		}
+	}
+	.nav > li {
+		a:hover, a:focus {
+			color: $p-color !important;
+			background-color: transparent;
+		}
+	}
+}
+
+

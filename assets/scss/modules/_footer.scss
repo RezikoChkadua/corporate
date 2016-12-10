@@ -1,0 +1,19 @@
+footer {
+    padding-top: 41px;
+    padding-bottom: 41px;
+    color: $white;
+    background: $bg-color;
+    @include breakpoint2($desktop) {
+        padding-bottom: md(41);
+        padding-bottom: md(41);
+    }
+    @include breakpoint2($tablet) {
+        padding-top: sm(41);
+        padding-bottom: sm(41);
+    }
+    @include breakpoint2($mobile, $x-mobile) {
+        padding-top: xs(41);
+        padding-bottom: xs(41);
+        font-size: 13px;
+    }
+}

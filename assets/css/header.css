@@ -1,0 +1,54 @@
+/*VARIABLES FOR RESPONSIVE*/
+/*VARIABLES FOR RESPONSIVE*/
+/*VARIABLES FOR RESPONSIVE*/
+header {
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  background: #ebeae9;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+}
+header.active {
+  border-bottom: 1px solid #00ccff;
+}
+header .navbar {
+  margin-bottom: 0;
+}
+header .navbar .navbar-header {
+  display: table;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  header .navbar .navbar-header {
+    float: left;
+  }
+}
+@media (max-width: 479px) {
+  header .navbar .navbar-header {
+    float: left;
+  }
+}
+header .navbar .navbar-brand {
+  padding: 0;
+  margin-left: 0 !important;
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  header .navbar .navbar-brand {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  header .navbar .navbar-brand {
+    width: 100%;
+  }
+}
+header .navbar .navbar-brand img {
+  max-height: 100%;
+  width: auto;
+}
+
+/*# sourceMappingURL=header.css.map */
