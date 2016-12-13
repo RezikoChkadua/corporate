@@ -1,18 +1,18 @@
-$(window).on("scroll", function () {
-    if ($(window).scrollTop() > 75) {
-        $("header").addClass("active");
+jQuery(window).on("scroll", function () {
+    if (jQuery(window).scrollTop() > 75) {
+        jQuery("header").addClass("active");
     } else {
         //remove the background property so it comes transparent again (defined in your css)
-        $("header").removeClass("active");
+        jQuery("header").removeClass("active");
     }
 });
 
 // Calculating portfolio images wrapper width
 function setupPortfolioImagesWidth() {
-    var windowWidth = $(window).width();
+    var windowWidth = jQuery(window).width();
     var wrapperPaddingLeft = 4;
     var imageRightMargin = 4;
-    var wrapper = $('.portfolio-wrapper');
+    var wrapper = jQuery('.portfolio-wrapper');
     var imageWrapper =  wrapper.find('a');
     var newQuantity;
     var newWidth;
@@ -34,13 +34,13 @@ function setupPortfolioImagesWidth() {
         imageWrapper.css('display', 'none');
         imageWrapper.slice(0, variableQuantity).css('display', 'inline-block');
         var i = 2;
-        $('.btn-more').on('click', function() {
+       jQuery('.btn-more').on('click', function() {
             var clickNumbers = parseInt(i++);
             imageWrapper.slice(0, variableQuantity*clickNumbers).css('display', 'inline-block');
             
-            var portfolioImgWrapper = $(this).closest('.portfolio-wrapper').find('.row-fluid a');
+            var portfolioImgWrapper = jQuery(this).closest('.portfolio-wrapper').find('.row-fluid a');
             portfolioImgWrapper.each(function () {
-                var portfolioImg = $(this).find('img');
+                var portfolioImg = jQuery(this).find('img');
                 portfolioImg.css({ 'width': 'auto', 'height': '100%' });
                 if (portfolioImg.width() < portfolioImgWrapper.width()) {
                     portfolioImg.css({ 'width': '100%', 'height': 'auto' });
@@ -48,7 +48,7 @@ function setupPortfolioImagesWidth() {
             });  
             if ((variableQuantity*clickNumbers) > imageWrapperLength) {
                 setTimeout(function(){
-                    $('.btn-more').addClass('btn-off');
+                   jQuery('.btn-more').addClass('btn-off');
                 }, 1600);
             }
             imageWrapper.slice(variableQuantity*(clickNumbers-1), variableQuantity*clickNumbers).hide().show(1500);
@@ -58,9 +58,9 @@ function setupPortfolioImagesWidth() {
 
 // Filling images
 function fillImages() {
-    var portfolioImgWrapper = $('.portfolio .portfolio-wrapper .row-fluid a');
+    var portfolioImgWrapper = jQuery('.portfolio .portfolio-wrapper .row-fluid a');
     portfolioImgWrapper.each(function () {
-        var portfolioImg = $(this).find('img');
+        var portfolioImg = jQuery(this).find('img');
         if (portfolioImg.width() < portfolioImgWrapper.width()) {
             portfolioImg.css({ 'width': '100%', 'height': 'auto' });
         }
@@ -69,12 +69,12 @@ function fillImages() {
 
 // Active section link on scroll
 function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('nav.navbar li a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
+    var scrollPos = jQuery(document).scrollTop();
+   jQuery('nav.navbar li a').each(function () {
+        var currLink = jQuery(this);
+        var refElement = jQuery(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('nav.navbar li a').removeClass("active");
+            jQuery('nav.navbar li a').removeClass("active");
             currLink.addClass("active");
         }
         else{
@@ -83,29 +83,29 @@ function onScroll(event){
     });
 }
 
-$(window).on('resize', function () {
+jQuery(window).on('resize', function () {
     setupPortfolioImagesWidth();
     fillImages();
 });
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
     fillImages();
     setupPortfolioImagesWidth();
 
 
     var maxHeight = 0;
-    $('.teservice-box-image').each(function() {
-      maxHeight = $(this).outerHeight() > maxHeight ? $(this).outerHeight() : maxHeight;
+   jQuery('.teservice-box-image').each(function() {
+      maxHeight = jQuery(this).outerHeight() > maxHeight ? jQuery(this).outerHeight() : maxHeight;
     }).outerHeight(maxHeight);
 
-    $(".carousel").swiperight(function() {
-        $(this).carousel('prev');
+   jQuery(".carousel").swiperight(function() {
+       jQuery(this).carousel('prev');
     });
-    $(".carousel").swipeleft(function() {
-        $(this).carousel('next');
+    jQuery(".carousel").swipeleft(function() {
+       jQuery(this).carousel('next');
     });
 
-    $.reject({
+    jQuery.reject({
         imagePath: 'assets/images/browser-reject/', 
         reject: { 
             all: false,
@@ -115,25 +115,25 @@ $(document).ready(function () {
         display: ['chrome', 'firefox', 'msie', 'safari'] // Displays only firefox, chrome, and opera  
     });  
 
-    $(document).on("scroll", onScroll);
+    jQuery(document).on("scroll", onScroll);
 
-    $('.navbar-nav ul li a').smoothScroll({ speed: 400, offset: -63 });
+    jQuery('.navbar-nav ul li a').smoothScroll({ speed: 400, offset: -63 });
 
-    $('.nav li').each(function () {
-        $(this).on('click', function () {
-            $(this).closest('.nav').find('li').removeClass('active');
-            $(this).addClass('active');
+   jQuery('.nav li').each(function () {
+        jQuery(this).on('click', function () {
+            jQuery(this).closest('.nav').find('li').removeClass('active');
+            jQuery(this).addClass('active');
         })
     });
 
-    $('.carousel').carousel({
+    jQuery('.carousel').carousel({
         pause: true,
         interval: false
     });
 
-    $('.portfolio-wrapper .row-fluid').each(function () {
+    jQuery('.portfolio-wrapper .row-fluid').each(function () {
         // event.preventDefault();
-        $(this).magnificPopup({
+        jQuery(this).magnificPopup({
             delegate: 'a',
             type: 'image',
             closeBtnInside: 'true',
@@ -146,8 +146,8 @@ $(document).ready(function () {
 
 // End of horisontal scroll
 
-$('.navbar-nav li a').click(function () {
-    $('.navbar-collapse').removeClass('in');
+jQuery('.navbar-nav li a').click(function () {
+    jQuery('.navbar-collapse').removeClass('in');
 });
 
 

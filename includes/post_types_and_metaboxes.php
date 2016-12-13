@@ -1,9 +1,5 @@
 <?php
-
-
-
-
-
+// enqueue post types
 require  get_template_directory() .'/includes/post-types/Logo.php';
 require  get_template_directory() .'/includes/post-types/slider_post_type.php';
 require  get_template_directory() .'/includes/post-types/portfolio_post_type.php';
@@ -14,7 +10,7 @@ require  get_template_directory() .'/includes/post-types/contact_us_post_type.ph
 
 
 
-
+// enqueue metaboxes
 require  get_template_directory() .'/includes/metaboxes/Logo_metabox.php';
 require  get_template_directory() .'/includes/metaboxes/slider_metabox.php';
 require  get_template_directory() .'/includes/metaboxes/portfolio_metabox.php';

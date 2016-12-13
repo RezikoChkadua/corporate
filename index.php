@@ -22,23 +22,21 @@
 <body>
 
 	<div class="global-wrapper">
-
+      <?php include 'includes/pages/logo.php' ?>
 		<div class="content">
 
-
-					<!-- Wrapper for slides -->
-				<?php include 'includes/pages/logo.php' ?>
-				  <?php include 'includes/pages/slider.php' ?>
-			  	 <?php include 'includes/pages/our_services.php' ?>
-				  	<?php include 'includes/pages/portfolio.php' ?>
-			        <?php include 'includes/pages/ourteam.php' ?>
-		         	  <?php include 'includes/pages/contact_us.php' ?>
+					
+				    <?php include 'includes/pages/slider.php' ?>
+			  	     <?php include 'includes/pages/our_services.php' ?>
+				  	  <?php include 'includes/pages/portfolio.php' ?>
+			           <?php include 'includes/pages/ourteam.php' ?>
+		         	    <?php include 'includes/pages/contact_us.php' ?>
 
 		</div>
-		<?php get_footer(); ?>
+		  <?php get_footer(); ?>
  	</div>
 
-
+    
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAliosaXSno8yasHmzzOGS_iyU0ffdboVg&callback=initMap"
     ></script>
 </body>
